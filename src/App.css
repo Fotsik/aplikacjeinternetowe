@@ -1,38 +1,154 @@
+body{
+  background: rgb(101,98,152);
+  background: linear-gradient(90deg, rgba(101,98,152,1) 0%, rgba(48,86,255,1) 100%);
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game{
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  flex-wrap: wrap;
+}
+
+.tile{
+  background-color: rgb(15, 182, 0);
+  color: rgb(15, 182, 0);
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  font-size: 25px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  outline: none;
+  border: solid 3px rgb(15, 182, 0);
+  border-radius: 5px;
+}
+
+.score{
+  font-size: 40px;
+  font-weight: 600;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ol, ul {
+  padding-left: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 90px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 128px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 128px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.table {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.table img {
+  margin: 0;
+  padding: 0;
+  width: 125px;
+  height: 125px;
+  position: absolute;
+}
+
+.black{
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  top: 375px;
+  left: 375px;
+  background-color: black;
+}
+
+.status {
+  width: 120px;
+  color: white;
+  text-transform: uppercase;
+}
+
+nav ul{
+  list-style: none;
+}
+
+nav ul li{
+  color: white;
+  font-size: 35px;
+}
+
+nav ul li a{
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover{
+  color: #929292;
+}
+
+.div1{
+  width: 200px;
+  height: 200px;
+  border: 10px red solid;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.div2{
+  width: 800px;
+  height: 400px;
+  background-color: rgb(108, 108, 202);
+  border: 10px blue dashed;
+  position: absolute;
+  left: 300px;
+  top: 300px;
+}
+
+.kalkulator{
+  position: relative;
+  display: flex;
+  justify-content: center;
 }

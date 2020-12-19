@@ -1,24 +1,51 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import MemoryGame from './Memorygame';
+import Tictactoe from './Tictactoe';
+import Puzzle from './Puzzle';
+import Calculator from './Calculator';
+
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Memory Game</Link>
+            </li>
+            <li>
+              <Link to="/puzzle">Puzzle</Link>
+            </li>
+            <li>
+              <Link to="/tictactoe">Kolko i krzyzyk</Link>
+            </li>
+            <li>
+              <Link to="/calculator">Kalkulator i zmiana diva</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/puzzle">
+            <Puzzle/>
+          </Route>
+          <Route path="/tictactoe">
+            <Tictactoe/>
+          </Route>
+          <Route path="/calculator">
+            <Calculator/>
+          </Route>
+          <Route path="/">
+            <MemoryGame/>
+          </Route>
+        </Switch>
+    </Router>
   );
 }
 
